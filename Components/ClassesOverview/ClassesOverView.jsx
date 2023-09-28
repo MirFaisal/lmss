@@ -17,7 +17,7 @@ const ClassesOverView = () => {
   return (
     <>
       <div className="container mx-auto">
-        <div className="class-wrapper max-w-screen-xl mx-auto py-16 rounded-2xl text-white">
+        <div className="class-wrapper max-w-screen-xl mx-auto py-16 md:rounded-2xl text-white">
           <h2 className="text-4xl text-center pb-5">
             অনলাইন ব্যাচে ভর্তি চলছে!
           </h2>
@@ -51,7 +51,7 @@ const ClassesOverView = () => {
 
           <div className="max-w-screen-lg mx-auto">
             <Slider {...config} className="skill-slider">
-              <div className="card">
+              <div className="card sm:px-2 md:px-3 lg:px-5">
                 <ClassItem />
               </div>
               <div className="card">
