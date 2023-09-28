@@ -1,10 +1,19 @@
 import { Link } from "react-router-dom";
-import "../../utility/slicks";
+import Slider from "react-slick";
 import ClassItem from "../ClassItem/ClassItem";
 import ClassGrupe from "../ClasssGrupe/ClassGrupe";
 import "./classoverview.css";
-
 const ClassesOverView = () => {
+  // slider config
+
+  const config = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
+
   return (
     <>
       <div className="container mx-auto">
@@ -40,24 +49,27 @@ const ClassesOverView = () => {
 
           {/* skill development slider */}
 
-          <div className=" max-w-screen-lg mx-auto">
-            <div className="skill-slider">
-              <div className="mx-5">
+          <div className="max-w-screen-lg mx-auto">
+            <Slider {...config} className="skill-slider">
+              <div className="card">
                 <ClassItem />
               </div>
-              <div className="mx-5">
+              <div className="card">
                 <ClassItem />
               </div>
-              <div className="mx-5">
+              <div className="card">
                 <ClassItem />
               </div>
-              <div className="mx-5">
+              <div className="card">
                 <ClassItem />
               </div>
-              <div className="mx-5">
+              <div className="card">
                 <ClassItem />
               </div>
-            </div>
+              <div className="card">
+                <ClassItem />
+              </div>
+            </Slider>
           </div>
 
           {/* skill development classes end*/}
