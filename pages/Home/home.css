@@ -1,16 +1,4 @@
 #doityours {
-  position: relative;
+  background-color: rgba(236, 245, 255, 0.932);
 }
-#doityours::before {
-  position: absolute;
-  bottom: 0;
-  height: 300px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  content: "";
-  background: url("/public/background/Cream\ and\ Yellow\ Orange\ House\ Stationary\ Teacher\ Thank\ You\ Card\ \(1\).png")
-    no-repeat;
-  background-size: contain;
-  background-position: bottom center;
-}
+
