@@ -1,5 +1,7 @@
 import Announcement from "../../Components/Announcement/Announcement";
 import ClassesOverView from "../../Components/ClassesOverview/ClassesOverView";
+import DoItYours from "../../Components/DIY/DoItYours";
+import './home.css'
 
 const Home = () => {
   return (
@@ -15,6 +17,12 @@ const Home = () => {
         <ClassesOverView />
       </section>
       {/* class lession end */}
+
+      {/* DIY */}
+      <section id='doityours'>
+        <DoItYours />
+      </section>
+      {/* DIY */}
     </>
   );
 };
