@@ -1,3 +1,4 @@
+import ConnectedBrand from "../ConnectedBrand/ConnectedBrand";
 import SliderNav from "../SkillSlider/SliderNav";
 
 const Skills = () => {
@@ -46,6 +47,9 @@ const Skills = () => {
         </div>
         <div>
           <SliderNav />
+        </div>
+        <div>
+          <ConnectedBrand />
         </div>
       </div>
     </>
