@@ -5,3 +5,15 @@
 body {
   font-family: "Noto Sans Bengali", sans-serif;
 }
+
+.dreamuniversity{
+  background: url(../dist/assets/dreamBG.jpg) no-repeat center/cover;
+}
+
+.dreamslider .slick-prev::before {
+  color: rgb(0, 0, 0); /* Change this to your desired color */
+}
+
+.dreamslider .slick-next::before {
+  color: rgb(0, 0, 0); /* Change this to your desired color */
+}

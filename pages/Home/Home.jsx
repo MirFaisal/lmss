@@ -2,6 +2,7 @@ import Announcement from "../../Components/Announcement/Announcement";
 import AnnuallyOnlineClass from "../../Components/AnnuallyOnlineClass/AnnuallyOnlineClass";
 import ClassesOverView from "../../Components/ClassesOverview/ClassesOverView";
 import DoItYours from "../../Components/DIY/DoItYours";
+import DreamUniversity from "../../Components/DreamUniversity/DreamUniversity";
 import Skills from "../../Components/Skills/Skills";
 import SscAndHsc from "../../Components/SscAndHsc/SscAndHsc";
 import "./home.css";
@@ -44,6 +45,12 @@ const Home = () => {
         <Skills />
       </section>
       {/* skills section end */}
+
+      {/* DreamUniversity section start */}
+      <section id="DreamUniversity">
+        <DreamUniversity />
+      </section>
+      {/* DreamUniversity section end */}
     </>
   );
 };
