@@ -2,6 +2,7 @@ import Announcement from "../../Components/Announcement/Announcement";
 import AnnuallyOnlineClass from "../../Components/AnnuallyOnlineClass/AnnuallyOnlineClass";
 import ClassesOverView from "../../Components/ClassesOverview/ClassesOverView";
 import DoItYours from "../../Components/DIY/DoItYours";
+import Skills from "../../Components/Skills/Skills";
 import SscAndHsc from "../../Components/SscAndHsc/SscAndHsc";
 import "./home.css";
 
@@ -37,6 +38,12 @@ const Home = () => {
         <SscAndHsc />
       </section>
       {/* hsc and ssc end */}
+
+      {/* skills section start */}
+      <section id="skills" className="bg-black">
+        <Skills />
+      </section>
+      {/* skills section end */}
     </>
   );
 };
