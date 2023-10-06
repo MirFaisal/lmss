@@ -3,7 +3,7 @@ import SliderNav from "../SkillSlider/SliderNav";
 const Skills = () => {
   return (
     <>
-      <div className="max-w-screen-xl py-20 mx-auto border border-white">
+      <div className="max-w-screen-xl py-20 mx-auto">
         <div className="text flex justify-center">
           <h3 className=" text-lg font-semibold flex items-center text-[#FAB005]">
             <img
