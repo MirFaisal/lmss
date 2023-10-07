@@ -9,13 +9,13 @@ const Navbar = () => {
           <NavLink to={"/"} className="flex items-center">
             <div className="flex items-center">
               <img
-                src="/public/logo/LOGO.png"
+                src="/logo/LOGO.png"
                 className="h-8 mr-3"
                 alt="Logo"
               />
 
               <img
-                src="/public/logo/Academy.png"
+                src="/logo/Academy.png"
                 className="h-8 mr-3"
                 alt="Logo"
               />
