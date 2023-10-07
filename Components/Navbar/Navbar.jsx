@@ -9,17 +9,16 @@ const Navbar = () => {
           <NavLink to={"/"} className="flex items-center">
             <div className="flex items-center">
               <img
-                src="../../public/logo/LOGO.png"
+                src="/public/logo/LOGO.png"
                 className="h-8 mr-3"
                 alt="Logo"
               />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                <img
-                  src="../../public/logo/Academy.png"
-                  className="h-8 mr-3"
-                  alt="Logo"
-                />
-              </span>
+
+              <img
+                src="/public/logo/Academy.png"
+                className="h-8 mr-3"
+                alt="Logo"
+              />
             </div>
           </NavLink>
           <button
