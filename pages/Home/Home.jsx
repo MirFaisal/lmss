@@ -3,6 +3,8 @@ import AnnuallyOnlineClass from "../../Components/AnnuallyOnlineClass/AnnuallyOn
 import ClassesOverView from "../../Components/ClassesOverview/ClassesOverView";
 import DoItYours from "../../Components/DIY/DoItYours";
 import DreamUniversity from "../../Components/DreamUniversity/DreamUniversity";
+import FirstChoice from "../../Components/FirstChoice/FirstChoice";
+import { JobPreparation } from "../../Components/JobPreparation/JobPreparation";
 import Skills from "../../Components/Skills/Skills";
 import SscAndHsc from "../../Components/SscAndHsc/SscAndHsc";
 import "./home.css";
@@ -51,6 +53,18 @@ const Home = () => {
         <DreamUniversity />
       </section>
       {/* DreamUniversity section end */}
+
+      {/* job preparation section start */}
+      <section id="JobPreparation">
+        <JobPreparation />
+      </section>
+      {/* job preparation section end */}
+
+      {/* FirstChoice section start */}
+      <section id="FirstChoice">
+        <FirstChoice />
+      </section>
+      {/* FirstChoice section end */}
     </>
   );
 };

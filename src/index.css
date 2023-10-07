@@ -18,3 +18,15 @@ body {
 .dreamslider .slick-next::before {
   color: rgb(0, 0, 0); /* Change this to your desired color */
 }
+
+#FirstChoice .slick-prev::before {
+  color: rgb(0, 0, 0); /* Change this to your desired color */
+}
+
+#FirstChoice .slick-next::before {
+  color: rgb(0, 0, 0); /* Change this to your desired color */
+}
+
+#FirstChoice .slick-list{
+  padding-top: 25px !important;
+}
