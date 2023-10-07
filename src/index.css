@@ -7,7 +7,7 @@ body {
 }
 
 .dreamuniversity{
-  background: url(../src/customAssets/dreamBG.jpg) no-repeat center/cover;
+  background: url(/public/customAssets/dreamBG.jpg) no-repeat center/cover;
   /* background: url(https://i.ibb.co/bJD2Kvk/dreamBG.jpg) no-repeat center/cover; */
 }
 

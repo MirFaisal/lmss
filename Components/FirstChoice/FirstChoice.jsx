@@ -130,7 +130,7 @@ const FirstChoice = () => {
             <div>
               <img
                 className="h-44"
-                src="src/customAssets/notemain.png"
+                src="./customAssets/notemain.png"
                 alt="notemain.png"
               />
             </div>
