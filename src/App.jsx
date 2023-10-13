@@ -1,43 +1,55 @@
-// import { RouterProvider, createBrowserRouter } from "react-router-dom";
-// import MainLayouts from "../layouts/MainLayouts";
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import MainLayouts from "./layouts/MainLayouts";
-import Login from "./pages/Login/Login";
 import Admission from "./pages/Admission/Admission";
+import Home from "./pages/Home/Home";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
+import PrivateRoute from "./private/PrivateRoute";
 
 function App() {
-  // const route = createBrowserRouter([
-  //   {
-  //     element: <MainLayouts />,
-  //     path: "/",
-  //     children: [
-  //       {
-  //         element: <Home />,
-  //         path: "/",
-  //       },
-  //       {
-  //         element: <Login />,
-  //         path: "/login",
-  //       },
-  //     ],
-  //   },
-  // ]);
+  const router = createBrowserRouter([
+    {
+      element: <MainLayouts />,
+      path: "/",
+      children: [
+        {
+          element: <Home />,
+          path: "/",
+        },
+        {
+          element: (
+            <PrivateRoute>
+              <Admission />
+            </PrivateRoute>
+          ),
+          path: "/admission",
+        },
+        {
+          element: <Register />,
+          path: "/register",
+        },
+      ],
+    },
+    {
+      element: <Login />,
+      path: "/login",
+    },
+  ]);
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<MainLayouts />}>
-          <Route index element={<Home />} />
-          <Route path="/admission" element={<Admission />} />
-        </Route>
-        {/* <Route path="/registration" element={<Registration />} /> */}
-        <Route path="/login" element={<Login />} />
-      </Routes>
-    </>
     // <>
-    //   {/* route provider */}
-    //   <RouterProvider router={route} />
+    //   <Routes>
+    //     <Route path="/" element={<MainLayouts />}>
+    //       <Route index element={<Home />} />
+    //       <Route path="/admission" element={<Admission />} />
+    //     </Route>
+    //     {/* <Route path="/registration" element={<Registration />} /> */}
+    //     <Route path="/login" element={<Login />} />
+    //   </Routes>
     // </>
+    <>
+      {/* route provider */}
+      <RouterProvider router={router} />
+    </>
   );
 }
 

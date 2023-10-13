@@ -1,5 +1,8 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { authContext } from "../../../context/UserContext";
 const Navbar = () => {
+  const { user, logoutFromAccount } = useContext(authContext);
   // alert(navigator.userAgent);
   return (
     <>
@@ -90,31 +93,7 @@ const Navbar = () => {
                         অনলাইন ব্যাচ
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        to="#"
-                        className="block px-4 py-2 hover:bg-gray-100 "
-                      >
-                        Settings
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="#"
-                        className="block px-4 py-2 hover:bg-gray-100 "
-                      >
-                        Earnings
-                      </Link>
-                    </li>
                   </ul>
-                  <div className="py-1">
-                    <Link
-                      to="#"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    >
-                      Sign out
-                    </Link>
-                  </div>
                 </div>
               </li>
               <li>
@@ -141,12 +120,21 @@ const Navbar = () => {
                   অনলাইন ব্যাচ
                 </Link>
               </li>
-              <Link
-                to="/login"
-                className="bg-black py-3 px-5 text-white rounded hover:bg-slate-950"
-              >
-                লগ-ইন
-              </Link>
+              {user?.email ? (
+                <button
+                  onClick={() => logoutFromAccount()}
+                  className="bg-black py-3 px-5 text-white rounded hover:bg-slate-950"
+                >
+                  লগ আউট
+                </button>
+              ) : (
+                <Link
+                  to="/login"
+                  className="bg-black py-3 px-5 text-white rounded hover:bg-slate-950"
+                >
+                  লগ-ইন
+                </Link>
+              )}
             </ul>
           </div>
         </div>
