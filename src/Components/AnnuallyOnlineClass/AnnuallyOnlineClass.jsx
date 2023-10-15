@@ -1,8 +1,8 @@
-import "./annuallyonlineClass.css";
-import TitleTag from "../Titles/TitleTag";
-import Title from "../Titles/Title";
 import CommonCard from "../Cards/CommonCard/CommonCard";
 import Button from "../Extra/Button";
+import Title from "../Titles/Title";
+import TitleTag from "../Titles/TitleTag";
+import "./annuallyonlineClass.css";
 // import Button from "../Extra/button";
 const AnnuallyOnlineClass = () => {
   return (

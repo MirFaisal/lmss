@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import MainLayouts from "./layouts/MainLayouts";
 import Admission from "./pages/Admission/Admission";
+import Class from "./pages/Classes/Class";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
@@ -15,6 +16,14 @@ function App() {
         {
           element: <Home />,
           path: "/",
+        },
+        {
+          path: "/class/:classId",
+          element: <Class />,
+        },
+        {
+          path: "/skill",
+          element: <Admission />,
         },
         {
           element: (

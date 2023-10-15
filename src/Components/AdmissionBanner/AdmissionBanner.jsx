@@ -1,11 +1,11 @@
-import React from 'react';
-import Title from "../../Components/Titles/Title";
+import React from "react";
 import Button from "../../Components/Extra/Button";
+import Title from "../../Components/Titles/Title";
 
 export const AdmissionBanner = () => {
   return (
     <>
-        <div id="admissionBanner">
+      <div id="admissionBanner">
         <div className="container mx-auto">
           <div className="max-w-screen-xl mx-auto py-10 md:rounded-2xl text-white">
             <Title
@@ -23,5 +23,5 @@ export const AdmissionBanner = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};

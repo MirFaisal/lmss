@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import Button from "../Extra/Button";
 import CommonCardThree from "../Cards/CommonCardThree/CommonCardThree";
+import Button from "../Extra/Button";
 
 const SliderNav = () => {
   const settingsOne = {

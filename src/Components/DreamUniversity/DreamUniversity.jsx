@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import Title from "../Titles/Title";
 import CommonCardOne from "../Cards/CommonCard/CommonCardOne";
 import Button from "../Extra/Button";
+import Title from "../Titles/Title";
 import TitleTag from "../Titles/TitleTag";
 
 const DreamUniversity = () => {

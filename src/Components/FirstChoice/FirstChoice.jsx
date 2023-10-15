@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import ResourseDownloadCard from "../Cards/ResourseDownloadCard/ResourseDownloadCard";
 import CommentCard from "../Cards/CommentCard/CommentCard";
+import ResourseDownloadCard from "../Cards/ResourseDownloadCard/ResourseDownloadCard";
 import Title from "../Titles/Title";
 
 const FirstChoice = () => {

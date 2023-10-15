@@ -11,7 +11,7 @@ body {
 }
 
 #ClassesOverView {
-  background: url(/customAssets/bannerBg.jpg) no-repeat center/cover;
+  background: url(/customAssets/mainbanner.png) no-repeat center/cover;
   position: relative;
   z-index: 1;
 }

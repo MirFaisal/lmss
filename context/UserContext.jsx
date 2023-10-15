@@ -14,6 +14,7 @@ import {
 import { createContext, useEffect, useState } from "react";
 import app from "../utility/firebase.init";
 export const authContext = createContext();
+
 const UserContext = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [user, setUser] = useState();
@@ -66,7 +67,7 @@ const UserContext = ({ children }) => {
   useEffect(() => {
     const subscribe = onAuthStateChanged(auth, (currentuser) => {
       setUser(currentuser);
-      setLoading(false);
+      setIsLoading(false);
     });
     return () => {
       subscribe();

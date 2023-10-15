@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import "./classoverview.css";
 import CommonCardOne from "../Cards/CommonCard/CommonCardOne";
 import ClassGrupe from "../ClasssGrupe/ClassGrupe";
 import Title from "../Titles/Title";
+import "./classoverview.css";
 const ClassesOverView = () => {
   // slider config
 
   const config = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,

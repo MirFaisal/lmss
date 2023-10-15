@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
-import TitleTag from "../Titles/TitleTag";
-import Title from "../Titles/Title";
 import CommonCardTwo from "../Cards/CommonCardTwo/CommonCardTwo";
 import Button from "../Extra/Button";
+import Title from "../Titles/Title";
+import TitleTag from "../Titles/TitleTag";
 
 const SscAndHsc = () => {
   return (

@@ -10,9 +10,7 @@ const Navbar = () => {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <NavLink to={"/"} className="flex items-center">
             <div className="flex items-center">
-              <img src="/logo/LOGO.png" className="h-8 mr-3" alt="Logo" />
-
-              <img src="/logo/Academy.png" className="h-8 mr-3" alt="Logo" />
+              <img src="/logo/LOGO.png" className=" w-24" alt="Logo" />
             </div>
           </NavLink>
           <button
@@ -44,7 +42,7 @@ const Navbar = () => {
             id="navbar-dropdown"
           >
             <ul className="flex flex-col items-center font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
-              <li>
+              {/* <li>
                 <Link
                   to="#"
                   className="block py-2 pl-3 pr-4 text-black bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 "
@@ -52,6 +50,153 @@ const Navbar = () => {
                 >
                   ক্লাস ৫-১২
                 </Link>
+              </li> */}
+              <li>
+                <button
+                  id="dropdownNavbarLink"
+                  data-dropdown-toggle="dropdownNavbar1"
+                  className="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto"
+                >
+                  ক্লাস ৫-১২
+                  <svg
+                    className="w-2.5 h-2.5 ml-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                {/* <!-- Dropdown menu --> */}
+                <div
+                  id="dropdownNavbar1"
+                  className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+                >
+                  <ul
+                    className="py-2 text-gray-700 "
+                    aria-labelledby="dropdownLargeButton"
+                  >
+                    <li>
+                      <Link
+                        to={"class/class-5"}
+                        className="block px-4 py-4 hover:bg-gray-100"
+                      >
+                        <div className="flex gap-1 items-center">
+                          <img
+                            width="28"
+                            height="28"
+                            src="https://img.icons8.com/fluency/48/class.png"
+                            alt="class"
+                          />
+                          <span className="text-lg">ক্লাস ৫</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={"class/class-6"}
+                        className="block px-4 py-4 hover:bg-gray-100"
+                      >
+                        <div className="flex gap-1 items-center">
+                          <img
+                            width="28"
+                            height="28"
+                            src="https://img.icons8.com/fluency/48/class.png"
+                            alt="class"
+                          />
+                          <span className="text-lg">ক্লাস ৬</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={"class/class-7"}
+                        className="block px-4 py-4 hover:bg-gray-100"
+                      >
+                        <div className="flex gap-1 items-center">
+                          <img
+                            width="28"
+                            height="28"
+                            src="https://img.icons8.com/fluency/48/class.png"
+                            alt="development-skill"
+                          />
+                          <span className="text-lg">ক্লাস ৭</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={"class/class-8"}
+                        className="block px-4 py-4 hover:bg-gray-100"
+                      >
+                        <div className="flex gap-1 items-center">
+                          <img
+                            width="28"
+                            height="28"
+                            src="https://img.icons8.com/fluency/48/class.png"
+                            alt="development-skill"
+                          />
+                          <span className="text-lg">ক্লাস ৮</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={"class/class-9"}
+                        className="block px-4 py-4 hover:bg-gray-100"
+                      >
+                        <div className="flex gap-1 items-center">
+                          <img
+                            width="28"
+                            height="28"
+                            src="https://img.icons8.com/fluency/48/class.png"
+                            alt="development-skill"
+                          />
+                          <span className="text-lg">ক্লাস ৯</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={"class/class-10"}
+                        className="block px-4 py-4 hover:bg-gray-100"
+                      >
+                        <div className="flex gap-1 items-center">
+                          <img
+                            width="28"
+                            height="28"
+                            src="https://img.icons8.com/fluency/48/class.png"
+                            alt="development-skill"
+                          />
+                          <span className="text-lg">ক্লাস ১০</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={"class/class-hsc"}
+                        className="block px-4 py-4 hover:bg-gray-100"
+                      >
+                        <div className="flex gap-1 items-center">
+                          <img
+                            width="28"
+                            height="28"
+                            src="https://img.icons8.com/fluency/48/class.png"
+                            alt="development-skill"
+                          />
+                          <span className="text-lg">এইচএসসি</span>
+                        </div>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li>
                 <button
@@ -82,15 +227,103 @@ const Navbar = () => {
                   className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
                 >
                   <ul
-                    className="py-2 text-sm text-gray-700 "
+                    className="py-2 text-gray-700 "
                     aria-labelledby="dropdownLargeButton"
                   >
                     <li>
                       <Link
-                        to="#"
-                        className="block px-4 py-2 hover:bg-gray-100"
+                        to={"/skill"}
+                        className="block px-4 py-4 hover:bg-gray-100"
                       >
-                        অনলাইন ব্যাচ
+                        <div className="flex gap-1 items-center">
+                          <img
+                            width="28"
+                            height="28"
+                            src="https://img.icons8.com/fluency/48/development-skill.png"
+                            alt="development-skill"
+                          />
+                          <span className="text-lg">অনলাইন ব্যাচ</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={"/skill"}
+                        className="block px-4 py-4 hover:bg-gray-100"
+                      >
+                        <div className="flex gap-1 items-center">
+                          <img
+                            width="28"
+                            height="28"
+                            src="https://img.icons8.com/fluency/48/development-skill.png"
+                            alt="development-skill"
+                          />
+                          <span className="text-lg">অনলাইন ব্যাচ</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={"/skill"}
+                        className="block px-4 py-4 hover:bg-gray-100"
+                      >
+                        <div className="flex gap-1 items-center">
+                          <img
+                            width="28"
+                            height="28"
+                            src="https://img.icons8.com/fluency/48/development-skill.png"
+                            alt="development-skill"
+                          />
+                          <span className="text-lg">অনলাইন ব্যাচ</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={"/skill"}
+                        className="block px-4 py-4 hover:bg-gray-100"
+                      >
+                        <div className="flex gap-1 items-center">
+                          <img
+                            width="28"
+                            height="28"
+                            src="https://img.icons8.com/fluency/48/development-skill.png"
+                            alt="development-skill"
+                          />
+                          <span className="text-lg">অনলাইন ব্যাচ</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={"/skill"}
+                        className="block px-4 py-4 hover:bg-gray-100"
+                      >
+                        <div className="flex gap-1 items-center">
+                          <img
+                            width="28"
+                            height="28"
+                            src="https://img.icons8.com/fluency/48/development-skill.png"
+                            alt="development-skill"
+                          />
+                          <span className="text-lg">অনলাইন ব্যাচ</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to={"/skill"}
+                        className="block px-4 py-4 hover:bg-gray-100"
+                      >
+                        <div className="flex gap-1 items-center">
+                          <img
+                            width="28"
+                            height="28"
+                            src="https://img.icons8.com/fluency/48/development-skill.png"
+                            alt="development-skill"
+                          />
+                          <span className="text-lg">অনলাইন ব্যাচ</span>
+                        </div>
                       </Link>
                     </li>
                   </ul>

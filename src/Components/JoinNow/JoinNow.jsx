@@ -1,8 +1,8 @@
 import React from "react";
-import Title from "../Titles/Title";
-import Button from "../Extra/Button";
-import LearningBoxInfo from "../Cards/LearningBoxInfo/LearningBoxInfo";
 import HelpDeskCard from "../Cards/HelpDeskCard/HelpDeskCard";
+import LearningBoxInfo from "../Cards/LearningBoxInfo/LearningBoxInfo";
+import Button from "../Extra/Button";
+import Title from "../Titles/Title";
 
 const JoinNow = () => {
   const info = [

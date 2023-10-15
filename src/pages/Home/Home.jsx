@@ -4,7 +4,6 @@ import ClassesOverView from "../../Components/ClassesOverview/ClassesOverView";
 import DoItYours from "../../Components/DIY/DoItYours";
 import DreamUniversity from "../../Components/DreamUniversity/DreamUniversity";
 import FirstChoice from "../../Components/FirstChoice/FirstChoice";
-import Footer from "../../Components/Footer/Footer";
 import { JobPreparation } from "../../Components/JobPreparation/JobPreparation";
 import JoinNow from "../../Components/JoinNow/JoinNow";
 import Skills from "../../Components/Skills/Skills";
@@ -67,8 +66,6 @@ const Home = () => {
         <JoinNow />
       </section>
       {/* JoinNow section end */}
-
-      
     </>
   );
 };
