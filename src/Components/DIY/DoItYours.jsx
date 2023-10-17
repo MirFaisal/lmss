@@ -3,7 +3,7 @@ import Title from "../Titles/Title";
 const DoItYours = () => {
   return (
     <>
-      <div className="pb-40 md:pt-0 pt-10">
+      <div className="md:pb-40 pb-10 md:pt-0 pt-10">
         <div className="max-w-screen-xl mx-auto">
           <Title
             title={" নিজের শেখা নিজেই গুছিয়ে নেয়ার যাত্রা শুরু হোক"}

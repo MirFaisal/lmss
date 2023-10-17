@@ -35,15 +35,15 @@ const JoinNow = () => {
     <>
       <div className="pb-24">
         <div className=" pt-24 max-w-screen-xl mx-auto">
-          <div className="joinTitle pb-24 pt-10">
+          <div className="joinTitle md:pb-24 pb-8 pt-10">
             <Title
               title={"আজই জয়েন করুন বাংলাদেশের সবচেয়ে বড় লার্নিং প্ল্যাটফর্মে"}
             ></Title>
             <Button text={"জয়েন করুন"} />
           </div>
 
-          <div className="flex gap-x-6">
-            <div className="w-[50%] flex flex-wrap justify-between gap-y-6">
+          <div className="flex gap-x-6 px-3 md:px-0">
+            <div className="md:w-[50%] w-full flex md:text-left text-center flex-wrap justify-between gap-y-6">
               {info.map((item) => (
                 <LearningBoxInfo
                   key={item.id}
@@ -53,7 +53,7 @@ const JoinNow = () => {
                 />
               ))}
             </div>
-            <div className="studyBg w-[50%] py-8"></div>
+            <div className="md:block hidden studyBg w-[50%] py-8"></div>
           </div>
           <HelpDeskCard />
         </div>

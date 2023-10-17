@@ -5,7 +5,7 @@ export default function CommonCard({ data }) {
   return (
     <>
       <Link>
-        <div className="w-[400px] p-4 border rounded-md">
+        <div className="max-w-[400px] p-4 border rounded-md">
           <div className=" rounded-md overflow-hidden mb-4 relative">
             <img
               src="https://10minuteschool.com/_next/image/?url=https%3A%2F%2Fcdn.10minuteschool.com%2Flg%2Fimages%2Fthumb_01_1677411943238.jpeg&w=1080&q=75"

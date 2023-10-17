@@ -39,7 +39,7 @@ const DreamUniversity = () => {
   return (
     <>
       <div className="dreamuniversity">
-        <div className=" pt-24 pb-32 max-w-screen-xl mx-auto">
+        <div className=" pt-24 md:pb-32 pb-10 max-w-screen-xl mx-auto">
           <TitleTag
             tag={"ভর্তি পরীক্ষা"}
             icon={
@@ -64,7 +64,7 @@ const DreamUniversity = () => {
               <CommonCardOne />
             </Slider>
           </div>
-          <div className="flex justify-center mt-12">
+          <div className="flex justify-center md:mt-12">
             <Button text={"সকল কোর্স"} />
           </div>
         </div>

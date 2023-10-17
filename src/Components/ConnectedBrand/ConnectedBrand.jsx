@@ -11,12 +11,12 @@ import {
 const ConnectedBrand = () => {
   return (
     <>
-      <div className="bg-slate-900 py-10 px-6 mt-9 rounded-2xl">
+      <div className="bg-slate-900 py-10 px-6 mt-9 rounded-2xl md:mx-0 mx-3">
         <p className="text-center text-xl text-slate-50 mb-8 ">
           দেশের সেরা প্রতিষ্ঠানগুলো নিচ্ছে আমাদের কর্পোরেট স্কিলস ডেভেলপমেন্ট
           প্রোগ্রাম
         </p>
-        <div className="flex justify-around">
+        <div className="flex justify-around flex-wrap">
           <Unilever className="grayscale" />
           <Samsung />
           <Brac />
