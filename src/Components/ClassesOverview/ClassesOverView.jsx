@@ -13,12 +13,29 @@ const ClassesOverView = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
     <>
       <div className="container mx-auto">
-        <div className="max-w-screen-xl mx-auto py-10 md:rounded-2xl text-white">
+        <div className="max-w-screen-xl mx-auto pb-10 pt-32 md:rounded-2xl text-white">
           <Title
             title={"অনলাইন ব্যাচে ভর্তি চলছে!"}
             slogan={

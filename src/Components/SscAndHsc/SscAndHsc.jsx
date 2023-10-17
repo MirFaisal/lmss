@@ -17,7 +17,7 @@ const SscAndHsc = () => {
 
         <div className="max-w-screen-xl mx-auto h-full">
           <Title title={"SSC ও HSC শিক্ষার্থীদের জন্য"} />
-          <div className="flex justify-center py-10 space-x-7">
+          <div className="flex md:justify-between justify-center gap-y-3 flex-wrap py-10">
             {/* item 1 */}
             <CommonCardTwo />
             <CommonCardTwo />

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const ClassItem = ({ classLevel }) => {
   return (
     <>
-      <div className="class-item max-w-[300px] py-5 my-5 text-black flex flex-col items-center justify-center grow bg-white rounded-lg border-2 border-transparent duration-150 hover:border-green-400 hover:-mt-4 hover:mb-4">
+      <div className="class-item max-w-[300px] py-5 text-black flex flex-col items-center justify-center grow bg-white rounded-lg border-2 border-transparent duration-150 hover:border-green-400 md:hover:-mt-4 md:hover:mb-4">
         <img
           className="mb-4"
           width="48"

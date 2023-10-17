@@ -6,7 +6,7 @@ const Navbar = () => {
   // alert(navigator.userAgent);
   return (
     <>
-      <nav className="bg-white border-gray-200 ">
+      <nav className="bg-white border-gray-200 fixed w-full top-0 z-50 ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <NavLink to={"/"} className="flex items-center">
             <div className="flex items-center">

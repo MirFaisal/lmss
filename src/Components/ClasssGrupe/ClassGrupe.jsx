@@ -5,7 +5,7 @@ import "./classgrupe.css";
 const ClassGrupe = () => {
   return (
     <>
-      <div className="flex justify-center items-center flex-wrap space-x-4 px-3 my-8">
+      <div className="flex justify-center items-center flex-wrap gap-3  px-3 my-8">
         {/* class item*/}
         <ClassItem classLevel={"দ্বাদশ"} />
         <ClassItem classLevel={"১০ম শ্রেণী"} />

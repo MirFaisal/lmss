@@ -12,7 +12,7 @@ const Skills = () => {
           color={"#FAB005"}
         />
         <Title title={"দেশসেরা স্কিল ডেভেলপমেন্ট প্লাটফর্ম"} color={"#fff"} />
-        <div className="flex justify-between w-[600px] mx-auto px-7">
+        <div className="flex flex-wrap justify-between w-[600px] mx-auto px-7">
           <div className="flex items-center">
             <i
               className="fa-solid fa-circle-check me-3"

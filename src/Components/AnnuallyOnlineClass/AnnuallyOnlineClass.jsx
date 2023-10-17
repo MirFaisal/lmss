@@ -22,7 +22,7 @@ const AnnuallyOnlineClass = () => {
               "সেরা শিক্ষকদের পরিচর্যায় দেশের যেকোন প্রান্ত থেকে অব্যাহত থাকুক পড়াশুনার অগ্রযাত্রা"
             }
           />
-          <div className="flex justify-center py-10 space-x-5">
+          <div className="flex md:justify-between justify-center gap-y-3 flex-wrap  py-10">
             {/* item 1 */}
             <CommonCard />
             {/* item2 */}
