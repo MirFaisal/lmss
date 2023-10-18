@@ -387,8 +387,12 @@ const Navbar1 = () => {
             </div>
           </Navbar.Brand>
         </NavLink>
+        <div className="flex">
+          <Navbar.Toggle />
+        </div>
         <Navbar.Collapse>
-          {/* <li>
+          <ul className="flex flex-col items-center font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-5 md:mt-0 md:border-0 md:bg-white">
+            {/* <li>
                 <Link
                   to="#"
                   className="block py-2 pl-3 pr-4 text-black bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 "
@@ -397,7 +401,6 @@ const Navbar1 = () => {
                   ক্লাস ৫-১২
                 </Link>
               </li> */}
-          <ul className="flex items-center gap-8">
             <li>
               <button
                 id="dropdownNavbarLink"
@@ -716,7 +719,6 @@ const Navbar1 = () => {
               </Link>
             )}
           </ul>
-
           {/* <Navbar.Link href="#" active>
             Home
           </Navbar.Link>
