@@ -86,7 +86,6 @@ const Footer = () => {
               <div className="">
                 <h6 className="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
                   <img className="h-8 mr-3" src="/logo/LOGO.png" alt="" />
-                  <img className="h-8" src="/logo/Academy.png" alt="" />
                 </h6>
                 <p>
                   Here you can use rows and columns to organize your footer

@@ -3,14 +3,14 @@ import React from "react";
 const AdmissionClass = () => {
   return (
     <>
-      <div className="pt-10 pb-24">
+      <div className="pt-10 pb-24 hidden md:block overflow-hidden">
         <div className="max-w-screen-xl mx-auto">
-          <h3 className="text-3xl font-semibold pb-6 leading-snug">
+          <h3 className="text-3xl font-semibold pb-6 leading-snug px-10 lg:px-0">
             এডমিশনের ক্লাসগুলো টেন মিনিট স্কুলে কেমন হয়, দেখে নাও
           </h3>
 
-          <div className="flex justify-between">
-            <div className="order-2 border border-gray-200 w-[40%] rounded-xl">
+          <div className="flex justify-between px-2 overflow-hidden">
+            <div className="order-2 border border-gray-200 w-[40%] rounded-xl overflow-hidden">
               <ul
                 className="flex flex-col flex-wrap -mb-px text-sm font-medium text-center"
                 id="myTab"

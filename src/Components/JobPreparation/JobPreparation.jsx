@@ -11,11 +11,11 @@ export const JobPreparation = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    nextArrow: <p>next</p>,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
+          arrows: false,
           slidesToShow: 3,
           slidesToScroll: 1,
         },
@@ -23,6 +23,7 @@ export const JobPreparation = () => {
       {
         breakpoint: 600,
         settings: {
+          arrows: false,
           slidesToShow: 2,
           slidesToScroll: 1,
         },

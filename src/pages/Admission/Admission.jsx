@@ -25,7 +25,6 @@ const Admission = () => {
       <StudentReview/>
       <AdmissionClass/>
       <AdmissionTeacher/>
-      <Faq/>
       <HotNumber/>
     </>
   );

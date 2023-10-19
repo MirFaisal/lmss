@@ -2,7 +2,7 @@ import React from "react";
 
 export const HotNumber = () => {
   return (
-    <div>
+    <div className="px-5">
       <div className="pt-5 pb-24">
         <div className="HotNumber max-w-screen-lg mx-auto bg-gray-500 rounded-3xl  py-20">
           <div className="title">

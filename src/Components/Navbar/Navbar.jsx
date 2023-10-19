@@ -1,13 +1,33 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { Link, NavLink } from "react-router-dom";
 import { authContext } from "../../../context/UserContext";
+import "./navbar.css";
 const Navbar1 = () => {
   const [show, setShow] = useState(false);
   const [classShow, setClassShow] = useState(false);
   const [skillShow, setSkillShow] = useState(false);
-
   const { user, logoutFromAccount } = useContext(authContext);
+
+  function getWindowSize() {
+    const { innerWidth, innerHeight } = window;
+    return { innerWidth, innerHeight };
+  }
+
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
   const handelNavbar = () => {
     setShow(!show);
   };
@@ -18,9 +38,26 @@ const Navbar1 = () => {
   const handelSkillhow = () => {
     setSkillShow(!skillShow);
   };
+
+  useEffect(() => {
+    document.getElementById("navbar").addEventListener("click", (e) => {
+      const li = e.target;
+      console.log(e.target.tagName);
+      if (li.tagName == "SPAN" || li.tagName == "A") {
+        if (windowSize.innerWidth > 768) {
+          handelNavbar();
+        }
+      }
+    });
+  }, []);
+
+  console.log(windowSize.innerWidth);
   return (
     <>
-      <nav className="bg-white border-gray-200 fixed w-full top-0 z-50 ">
+      <nav
+        id="navbar"
+        className="bg-white border-gray-200 fixed w-full top-0 z-50"
+      >
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <NavLink to={"/"} className="flex items-center">
             <div className="flex items-center">
@@ -65,7 +102,7 @@ const Navbar1 = () => {
                   ক্লাস ৫-১২
                 </Link>
               </li> */}
-              <li>
+              <li id="class-button">
                 <button
                   onClick={handelClassShow}
                   id="dropdownNavbarLink"
@@ -90,9 +127,8 @@ const Navbar1 = () => {
                 </button>
                 {/* <!-- Dropdown menu --> */}
                 <div
-                  className={`z-10 ${
-                    classShow ? "block" : "hidden"
-                  } font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}
+                  id="class-dropdown"
+                  className={`z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}
                 >
                   <ul
                     className="py-2 text-gray-700 "
@@ -213,10 +249,10 @@ const Navbar1 = () => {
                   </ul>
                 </div>
               </li>
-              <li>
+              <li id="skill-button">
                 <button
                   onClick={handelSkillhow}
-                  data-dropdown-toggle="dropdownNavbar"
+                  
                   className="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto"
                 >
                   স্কিলস{" "}
@@ -238,9 +274,8 @@ const Navbar1 = () => {
                 </button>
                 {/* <!-- Dropdown menu --> */}
                 <div
-                  className={`z-10 ${
-                    skillShow ? "block" : "hidden"
-                  } font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}
+                  id="skills-dropdown"
+                  className={`z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}
                 >
                   <ul
                     className="py-2 text-gray-700 "
