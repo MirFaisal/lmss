@@ -30,6 +30,7 @@ const FirstChoice = () => {
       {
         breakpoint: 480,
         settings: {
+          arrows: false,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
