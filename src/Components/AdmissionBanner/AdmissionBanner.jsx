@@ -5,7 +5,7 @@ import Title from "../../Components/Titles/Title";
 export const AdmissionBanner = () => {
   return (
     <>
-      <div id="admissionBanner">
+      <div className="mt-20" id="admissionBanner">
         <div className="container mx-auto">
           <div className="max-w-screen-xl mx-auto py-10 md:rounded-2xl text-white">
             <Title
