@@ -40,18 +40,18 @@ const Navbar1 = () => {
   };
 
   useEffect(() => {
-    const navbar = document.getElementById("navbar")
-      navbar.addEventListener("click", (e) => {
-        const li = e.target;
-        console.log(e.target.tagName);
-        if (windowSize.innerWidth < 768) {
-          if (li.tagName == "SPAN" || li.tagName == "A") {
-            handelNavbar();
-            console.log("call");
-          }
+    const navbar = document.getElementById("navbar");
+    navbar.addEventListener("click", (e) => {
+      const li = e.target;
+      console.log(e.target.tagName);
+      if (windowSize.innerWidth < 768) {
+        if (li.tagName == "SPAN" || li.tagName == "A") {
+          handelNavbar();
+          console.log("call");
         }
-      });
-  },[])
+      }
+    });
+  }, []);
 
   console.log(windowSize.innerWidth);
   return (
@@ -89,7 +89,7 @@ const Navbar1 = () => {
             </svg>
           </button>
           <div
-            className={show ?  "block w-full md:block md:w-auto" : "hidden"}
+            className={`${show ? "hidden" : "block w-full md:block md:w-auto"}`}
             id="navbar-dropdown"
           >
             <ul className="flex flex-col items-center font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-5 md:mt-0 md:border-0 md:bg-white">
