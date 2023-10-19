@@ -43,8 +43,8 @@ const Navbar1 = () => {
     document.getElementById("navbar").addEventListener("click", (e) => {
       const li = e.target;
       console.log(e.target.tagName);
-      if (li.tagName == "SPAN" || li.tagName == "A") {
-        if (windowSize.innerWidth > 768) {
+      if (windowSize.innerWidth < 768) {
+        if ((li.tagName == "SPAN") | (li.tagName == "A")) {
           handelNavbar();
         }
       }
@@ -252,7 +252,6 @@ const Navbar1 = () => {
               <li id="skill-button">
                 <button
                   onClick={handelSkillhow}
-                  
                   className="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto"
                 >
                   স্কিলস{" "}
