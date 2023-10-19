@@ -1,9 +1,15 @@
 import { useContext, useEffect, useState } from "react";
 
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
 import { authContext } from "../../../context/UserContext";
 import "./navbar.css";
 const Navbar1 = () => {
+  const [url, seturl] = useState("");
+  const link = useParams();
+  useEffect(() => {
+    seturl(link);
+  }, []);
+  console.log(url);
   const [show, setShow] = useState(false);
   const [classShow, setClassShow] = useState(false);
   const [skillShow, setSkillShow] = useState(false);
@@ -44,12 +50,12 @@ const Navbar1 = () => {
       const li = e.target;
       console.log(li.tagName);
       if (windowSize.innerWidth < 768) {
-        if (li.tagName == "SPAN" || li.tagName == "A") {
+        if (li.tagName === "SPAN" || li.tagName === "A") {
           handelNavbar();
         }
       }
     });
-  }, []);
+  }, [url.classId]);
 
   console.log(windowSize.innerWidth);
   return (
