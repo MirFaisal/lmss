@@ -40,14 +40,12 @@ const Navbar1 = () => {
   };
 
   useEffect(() => {
-    const navbar = document.getElementById("navbar");
-    navbar.addEventListener("click", (e) => {
+    document.getElementById("navbar").addEventListener("click", (e) => {
       const li = e.target;
-      console.log(e.target.tagName);
+      console.log(li.tagName);
       if (windowSize.innerWidth < 768) {
         if (li.tagName == "SPAN" || li.tagName == "A") {
           handelNavbar();
-          console.log("call");
         }
       }
     });
@@ -70,6 +68,8 @@ const Navbar1 = () => {
             onClick={handelNavbar}
             type="button"
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-dropdown"
+            aria-expanded="false"
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -89,7 +89,7 @@ const Navbar1 = () => {
             </svg>
           </button>
           <div
-            className={`${show ? "hidden" : "block w-full md:block md:w-auto"}`}
+            className={`${show ? "block" : "hidden"} w-full md:block md:w-auto`}
             id="navbar-dropdown"
           >
             <ul className="flex flex-col items-center font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-5 md:mt-0 md:border-0 md:bg-white">
