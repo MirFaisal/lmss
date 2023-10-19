@@ -39,19 +39,19 @@ const Navbar1 = () => {
     setSkillShow(!skillShow);
   };
 
-  // useEffect(() => {
-  //   const navbar = document.getElementById("navbar")
-  //     navbar.addEventListener("click", (e) => {
-  //       const li = e.target;
-  //       console.log(e.target.tagName);
-  //       if (windowSize.innerWidth < 768) {
-  //         if (li.tagName == "SPAN" || li.tagName == "A") {
-  //           handelNavbar();
-  //           console.log("call");
-  //         }
-  //       }
-  //     });
-  // },[])
+  useEffect(() => {
+    const navbar = document.getElementById("navbar")
+      navbar.addEventListener("click", (e) => {
+        const li = e.target;
+        console.log(e.target.tagName);
+        if (windowSize.innerWidth < 768) {
+          if (li.tagName == "SPAN" || li.tagName == "A") {
+            handelNavbar();
+            console.log("call");
+          }
+        }
+      });
+  },[])
 
   console.log(windowSize.innerWidth);
   return (
