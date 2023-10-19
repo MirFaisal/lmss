@@ -16,6 +16,7 @@ import app from "../utility/firebase.init";
 export const authContext = createContext();
 
 const UserContext = ({ children }) => {
+  const [url, setUrl] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [user, setUser] = useState();
   // firebase auth
@@ -89,6 +90,8 @@ const UserContext = ({ children }) => {
           passwordReste,
           updateUserProfile,
           logoutFromAccount,
+          setUrl,
+          url
         }}
       >
         {children}

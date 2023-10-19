@@ -1,15 +1,16 @@
 import { useContext, useEffect, useState } from "react";
 
-import { Link, NavLink, useParams } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { authContext } from "../../../context/UserContext";
 import "./navbar.css";
 const Navbar1 = () => {
-  const [url, seturl] = useState("");
-  const link = useParams();
-  useEffect(() => {
-    seturl(link);
-  }, []);
-  console.log(url);
+  const { url, setUrl } = useContext(authContext);
+  const link = useLocation();
+  // useEffect(() => {
+  //   seturl(link);
+  // }, []);
+  console.log(link.pathname);
+  setUrl(link.pathname)
   const [show, setShow] = useState(false);
   const [classShow, setClassShow] = useState(false);
   const [skillShow, setSkillShow] = useState(false);
@@ -47,11 +48,9 @@ const Navbar1 = () => {
 
   useEffect(() => {
     if (windowSize.innerWidth < 768) {
-      if (li.tagName === "SPAN" || li.tagName === "A") {
-        handelNavbar();
-      }
+      handelNavbar();
     }
-  }, [url.classId]);
+  }, [url]);
 
   console.log(windowSize.innerWidth);
   return (
