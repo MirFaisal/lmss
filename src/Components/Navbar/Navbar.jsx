@@ -46,15 +46,11 @@ const Navbar1 = () => {
   };
 
   useEffect(() => {
-    document.getElementById("navbar").addEventListener("click", (e) => {
-      const li = e.target;
-      console.log(li.tagName);
-      if (windowSize.innerWidth < 768) {
-        if (li.tagName === "SPAN" || li.tagName === "A") {
-          handelNavbar();
-        }
+    if (windowSize.innerWidth < 768) {
+      if (li.tagName === "SPAN" || li.tagName === "A") {
+        handelNavbar();
       }
-    });
+    }
   }, [url.classId]);
 
   console.log(windowSize.innerWidth);
