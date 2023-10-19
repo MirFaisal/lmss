@@ -4,9 +4,19 @@ import { Link, NavLink } from "react-router-dom";
 import { authContext } from "../../../context/UserContext";
 const Navbar1 = () => {
   const [show, setShow] = useState(false);
+  const [classShow, setClassShow] = useState(false);
+  const [skillShow, setSkillShow] = useState(false);
+
   const { user, logoutFromAccount } = useContext(authContext);
   const handelNavbar = () => {
     setShow(!show);
+  };
+  const handelClassShow = () => {
+    setClassShow(!classShow);
+  };
+
+  const handelSkillhow = () => {
+    setSkillShow(!skillShow);
   };
   return (
     <>
@@ -57,8 +67,8 @@ const Navbar1 = () => {
               </li> */}
               <li>
                 <button
+                  onClick={handelClassShow}
                   id="dropdownNavbarLink"
-                  data-dropdown-toggle="dropdownNavbar1"
                   className="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto"
                 >
                   ক্লাস ৫-১২
@@ -80,8 +90,9 @@ const Navbar1 = () => {
                 </button>
                 {/* <!-- Dropdown menu --> */}
                 <div
-                  id="dropdownNavbar1"
-                  className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+                  className={`z-10 ${
+                    classShow ? "block" : "hidden"
+                  } font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}
                 >
                   <ul
                     className="py-2 text-gray-700 "
@@ -204,7 +215,7 @@ const Navbar1 = () => {
               </li>
               <li>
                 <button
-                  id="dropdownNavbarLink"
+                  onClick={handelSkillhow}
                   data-dropdown-toggle="dropdownNavbar"
                   className="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto"
                 >
@@ -227,8 +238,9 @@ const Navbar1 = () => {
                 </button>
                 {/* <!-- Dropdown menu --> */}
                 <div
-                  id="dropdownNavbar"
-                  className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+                  className={`z-10 ${
+                    skillShow ? "block" : "hidden"
+                  } font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}
                 >
                   <ul
                     className="py-2 text-gray-700 "
